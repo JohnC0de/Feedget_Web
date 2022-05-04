@@ -2,14 +2,17 @@ lockfileVersion: 5.3
 
 specifiers:
   '@headlessui/react': ^1.6.1
+  '@tailwindcss/forms': ^0.5.1
   '@types/react': ^18.0.0
   '@types/react-dom': ^18.0.0
   '@vitejs/plugin-react': ^1.3.0
   autoprefixer: ^10.4.7
+  html2canvas: ^1.4.1
   phosphor-react: ^1.4.1
   postcss: ^8.4.13
   react: ^18.0.0
   react-dom: ^18.0.0
+  tailwind-scrollbar: ^1.3.1
   tailwindcss: ^3.0.24
   typescript: ^4.6.3
   vite: ^2.9.5
@@ -17,15 +20,18 @@ specifiers:
 dependencies:
   '@headlessui/react': 1.6.1_react-dom@18.1.0+react@18.1.0
   autoprefixer: 10.4.7_postcss@8.4.13
+  html2canvas: 1.4.1
   phosphor-react: 1.4.1_react@18.1.0
   postcss: 8.4.13
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
 
 devDependencies:
+  '@tailwindcss/forms': 0.5.1_tailwindcss@3.0.24
   '@types/react': 18.0.8
   '@types/react-dom': 18.0.3
   '@vitejs/plugin-react': 1.3.2
+  tailwind-scrollbar: 1.3.1
   tailwindcss: 3.0.24
   typescript: 4.6.4
   vite: 2.9.7
@@ -362,6 +368,15 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@tailwindcss/forms/0.5.1_tailwindcss@3.0.24:
+    resolution: {integrity: sha512-QSwsFORnC2BAP0lRzQkz1pw+EzIiiPdk4e27vGQjyXkwJPeC7iLIRVndJzf9CJVbcrrIcirb/TfxF3gRTyFEVA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.0.24
+    dev: true
+
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
     dev: true
@@ -454,6 +469,11 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
+  /base64-arraybuffer/1.0.2:
+    resolution: {integrity: sha512-I3yl4r9QB5ZRY3XuJVEPfc2XhZO6YweFPI+UovAzn+8/hb3oJ6lnysaFcjVpkCPfVWFUDvoZ8kmVDP7WyRtYtQ==}
+    engines: {node: '>= 0.6.0'}
+    dev: false
+
   /binary-extensions/2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -528,6 +548,12 @@ packages:
     dependencies:
       safe-buffer: 5.1.2
     dev: true
+
+  /css-line-break/2.1.0:
+    resolution: {integrity: sha512-FHcKFCZcAha3LwfVBhCQbW2nCNbkZXn7KVUJcsT5/P8YmfsVja0FMPJr0B903j/E69HUphKiV9iQArX8SDYA4w==}
+    dependencies:
+      utrie: 1.0.2
+    dev: false
 
   /cssesc/3.0.0:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
@@ -873,6 +899,14 @@ packages:
       function-bind: 1.1.1
     dev: true
 
+  /html2canvas/1.4.1:
+    resolution: {integrity: sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==}
+    engines: {node: '>=8.0.0'}
+    dependencies:
+      css-line-break: 2.1.0
+      text-segmentation: 1.0.3
+    dev: false
+
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
@@ -941,6 +975,11 @@ packages:
     dependencies:
       braces: 3.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /mini-svg-data-uri/1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimist/1.2.6:
@@ -1148,6 +1187,14 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
+  /tailwind-scrollbar/1.3.1:
+    resolution: {integrity: sha512-FeYuLxLtCRMO4PmjPJCzm5wQouFro2BInZXKPxqg54DR/55NAHoS8uNYWMiRG5l6qsLkWBfVEM34gq2XAQUwVg==}
+    dependencies:
+      tailwindcss: 3.0.24
+    transitivePeerDependencies:
+      - ts-node
+    dev: true
+
   /tailwindcss/3.0.24:
     resolution: {integrity: sha512-H3uMmZNWzG6aqmg9q07ZIRNIawoiEcNFKDfL+YzOPuPsXuDXxJxB9icqzLgdzKNwjG3SAro2h9SYav8ewXNgig==}
     engines: {node: '>=12.13.0'}
@@ -1178,6 +1225,12 @@ packages:
       - ts-node
     dev: true
 
+  /text-segmentation/1.0.3:
+    resolution: {integrity: sha512-iOiPUo/BGnZ6+54OsWxZidGCsdU8YbE4PSpdPinp7DeMtUJNJBoJ/ouUSTJjHkh1KntHaltHl/gDs2FC4i5+Nw==}
+    dependencies:
+      utrie: 1.0.2
+    dev: false
+
   /to-fast-properties/2.0.0:
     resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
     engines: {node: '>=4'}
@@ -1199,6 +1252,12 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
+
+  /utrie/1.0.2:
+    resolution: {integrity: sha512-1MLa5ouZiOmQzUbjbu9VmjLzn1QLXBhwpUa7kdLUQK+KQ5KA9I1vk5U4YHe/X2Ch7PYnJfWuWT+VbuxbGwljhw==}
+    dependencies:
+      base64-arraybuffer: 1.0.2
+    dev: false
 
   /vite/2.9.7:
     resolution: {integrity: sha512-5hH7aNQe8rJiTTqCtPNX/6mIKlGw+1wg8UXwAxDIIN8XaSR+Zx3GT2zSu7QKa1vIaBqfUODGh3vpwY8r0AW/jw==}
