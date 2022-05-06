@@ -3,7 +3,7 @@ import { Camera, Trash } from 'phosphor-react'
 import { useState } from 'react'
 import Loading from '../Loading'
 
-interface onScreenshotTook {
+interface ScreenshotButtonProps {
   screenshot: string | null
   onScreenshotTook: (screenshot: string | null) => void
 }
@@ -11,7 +11,7 @@ interface onScreenshotTook {
 export default function ScreenshotButton({
   screenshot,
   onScreenshotTook
-}: onScreenshotTook) {
+}: ScreenshotButtonProps) {
   const [isTakingScreenshot, setIsTakingScreenshot] = useState(false)
 
   async function handleTakeScreenshot() {
